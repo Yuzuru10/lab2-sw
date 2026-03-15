@@ -4,6 +4,7 @@ public class QualityDimension{
     private float weight;
     private String isoCode;
     private ArrayList<Criterion> criteria;
+
     public QualityDimension(String name, String isoCode, float weight){
         this.name = name;
         this.isoCode = isoCode;
@@ -33,6 +34,9 @@ public class QualityDimension{
         if (score >= 3.5) return "Good Quality";
         if (score >= 2.5) return "Needs Improvement";
         return "Poor Quality";
+    }
+    public double QualityGap() {
+        return Math.round((5.0 - CalculateDimension()) * 10.0) / 10.0;
     }
 
     public String name(){return name;}
