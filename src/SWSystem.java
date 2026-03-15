@@ -57,7 +57,7 @@ public class SWSystem {
             for(Criterion c : d.Criteria()){
                 String direction = c.direction() == 1 ? "Higher is better" : "Lower is better";
                 System.out.printf("%s: %.1f %s -> Score: %.1f (%s)%n",
-                        c.name(), c.value(), c.unit(), c.Calculate(), direction);
+                        c.name(), c.measuredvalue(), c.unit(), c.Calculate(), direction);
             }
             System.out.printf(">> Dimension Score: %.1f/5 [%s]%n",
                     d.CalculateDimension(), d.IsoCode());
